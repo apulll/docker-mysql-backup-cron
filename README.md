@@ -7,7 +7,7 @@ Add your user to docker group to be able to use it with non root user:
 $ sudo usermod -aG docker username
 ```
 
-## Get docker-broadcaster
+## Get docker-mysql-backup-cron
 Download the repository on your public server.
 ```console
 $ docker run --name akg-mysql -p 3306:3306 [ -e parameters ] anthonykgross/docker-mysql-backup-cron
