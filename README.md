@@ -10,7 +10,7 @@ $ sudo usermod -aG docker username
 ## Get docker-mysql-backup-cron
 Download the repository on your public server.
 ```console
-$ docker run --name akg-mysql -p 3306:3306 [ -e parameters ] anthonykgross/docker-mysql-backup-cron
+$ docker run --name akg-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root --volume=$(pwd)/src:/src [ -e parameters ] anthonykgross/docker-mysql-backup-cron
 ```
 or
 ```console
@@ -21,10 +21,11 @@ $ docker-compose up -d
 ```
 
 ## Parameters
-You an find every useful directories in the **docker-compose.yml** and use the **--volume** docker parameter to override them by yours.
+You can find every useful directories in the **docker-compose.yml** and use the **--volume** docker parameter to override them by yours.
 ```console
-$ docker run --name akg-mysql -p 3306:3306 --volume=$(pwd)/conf/cron.conf:/etc/cron.d/cron-mysql.conf anthonykgross/docker-mysql-backup-cron
+$ docker run --name akg-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root --volume=$(pwd)/src:/src anthonykgross/docker-mysql-backup-cron
 ```
+More parameters : <https://hub.docker.com/_/mysql/>
 
 ## Creator
 **Anthony K GROSS**
