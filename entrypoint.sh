@@ -13,6 +13,7 @@ run() {
     chmod 0644 /etc/cron.d/cron-mysql.conf
     crontab -u root /etc/cron.d/cron-mysql.conf
     chmod 644 /etc/mysql/my.cnf
+    env > /root/.bash_profile
     supervisord
 }
 
