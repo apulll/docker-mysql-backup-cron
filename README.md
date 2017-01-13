@@ -25,7 +25,11 @@ You can find every useful directories in the **docker-compose.yml** and use the 
 ```console
 $ docker run --name akg-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root --volume=$(pwd)/src:/src anthonykgross/docker-mysql-backup-cron
 ```
+**MYSQL_MAX_CONNEXIONS**
+Upgrade the number of max clients connections.
+
 More parameters : <https://hub.docker.com/_/mysql/>
+
 
 ## Creator
 **Anthony K GROSS**
