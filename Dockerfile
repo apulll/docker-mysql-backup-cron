@@ -4,6 +4,8 @@ MAINTAINER Anthony K GROSS<anthony.k.gross@gmail.com>
 
 WORKDIR /src
 
+ENV MYSQL_MAX_CONNEXIONS "200"
+
 RUN mv /entrypoint.sh /mysql-entrypoint.sh
 COPY entrypoint.sh /entrypoint.sh
 
@@ -20,7 +22,7 @@ RUN apt-get update -y && \
     chmod -R 777 /var/run/mysqld && \
     chmod +x /entrypoint.sh
 
-COPY conf/mysql.cnf /etc/mysql/my.cnf
+COPY conf/mysql/my.cnf /etc/mysql/my.cnf
 COPY conf/cron.conf /etc/cron.d/cron-mysql.conf
 COPY conf/supervisor.conf /etc/supervisor/conf.d/supervisor.conf
 COPY scripts /scripts

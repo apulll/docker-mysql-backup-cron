@@ -6,7 +6,7 @@ mysql:
   volumes:
     - ./lib:/var/lib/mysql
     - ./logs:/var/log/mysql
-    - ./conf/mysql.cnf:/etc/mysql/my.cnf
+    - ./conf/mysql:/etc/mysql
     - ./conf/cron.conf:/etc/cron.d/cron-mysql.conf
     - ./conf/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf
     - ./backup:/src

@@ -10,6 +10,7 @@ tests() {
 }
 
 run() {
+    sed -i -e 's/MYSQL_MAX_CONNEXIONS/'$MYSQL_MAX_CONNEXIONS'/g' /etc/mysql/my.cnf
     chmod 0644 /etc/cron.d/cron-mysql.conf
     crontab -u root /etc/cron.d/cron-mysql.conf
     chmod 644 /etc/mysql/my.cnf
