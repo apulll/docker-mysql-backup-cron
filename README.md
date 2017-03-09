@@ -1,3 +1,5 @@
+[![Docker pulls](https://img.shields.io/docker/pulls/anthonykgross/docker-mysql-backup-cron.svg)](https://hub.docker.com/r/anthonykgross/docker-mysql-backup-cron/)
+
 # What is anthonykgross/docker-mysql-backup-cron ?
 This image is the easier way to install mysql server and crontable backup. Just edit the cron.conf and schedule when you want the backup will run.
 
